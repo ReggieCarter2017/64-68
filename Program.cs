@@ -1,10 +1,19 @@
-﻿string Recursive(int n)
+﻿int sum = 0;
+int Recursive(int m, int n)
 {
-    if (n == 0) return string.Empty;
-    else return $"{n} {Recursive(n-1)}";
-    
+    if (m <= n)
+    {
+        sum += m;
+        m = m + 1;
+        return Recursive(m, n);
+    }
+    else
+    {
+        return m=sum;
+    }
+
 }
 
 
 
-Console.WriteLine(Recursive(4));
+Console.WriteLine(Recursive(10, 100));
