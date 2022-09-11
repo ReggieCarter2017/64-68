@@ -1,19 +1,10 @@
-﻿int sum = 0;
-int Recursive(int m, int n)
+﻿int Ackermann(int a, int b)
 {
-    if (m <= n)
-    {
-        sum += m;
-        m = m + 1;
-        return Recursive(m, n);
-    }
-    else
-    {
-        return m=sum;
-    }
-
+  if (a == 0) return b + 1;
+  else
+  {
+    if ((a != 0) && (b == 0)) return Ackermann(a - 1, 1);
+    else return Ackermann(a - 1, Ackermann(a, b - 1));
+  }
 }
-
-
-
-Console.WriteLine(Recursive(10, 100));
+Console.Write(Ackermann(2, 2));
