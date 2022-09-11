@@ -4,7 +4,7 @@ int Recursive(int m, int n)
     if (m <= n)
     {
         sum += m;
-        m = m + 1;
+        m += 1;
         return Recursive(m, n);
     }
     else
