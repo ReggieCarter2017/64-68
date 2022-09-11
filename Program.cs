@@ -1,4 +1,4 @@
-﻿int Ackermann(int a, int b)
+﻿uint Ackermann(uint a, uint b)
 {
   if (a == 0) return b + 1;
   else
